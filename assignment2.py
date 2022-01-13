@@ -15,19 +15,19 @@ xtest=[]
 
 #storing images for training and testing-------
 
-for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\marked_set'):
+for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\Unmarked_set'):
     img=cv2.imread(i) 
     color=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     color=cv2.resize(color,(128,128))
     xtrain.append(color)
 
-for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\Unmarked_set'):
+for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\marked_set'):
     img=cv2.imread(i) 
     b_w=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     b_w=cv2.resize(b_w,(128,128))    
     ytrain.append(b_w)
 
-for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\Unmarked_set'):
+for i in glob.glob('C:\Users\US\Downloads\trantor_assignment\trantor\images\marked_set.jpg'):
     img=cv2.imread(i) 
     color=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     color=cv2.resize(color,(128,128))
